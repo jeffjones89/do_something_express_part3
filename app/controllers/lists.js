@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
-var List = require("../models/list")
+var DB = require("../../db/connection.js")
+var List = DB.models.List;
+var Task = DB.models.Task;
 
 function error(response, message){
   response.status(500);
